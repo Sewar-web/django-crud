@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snacks App</title>
+</head>
+
+<body>
+
+    <header>
+        <h2>Welcome to Snacks App</h2>
+        <nav>
+            <ul>
+                <h1>
+                    <li><a href="{% url 'snack_list' %}">List of snacks</a></li>
+                </h1>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        <h2>List of Snacks</h2>
+        <ul>
+            {% for snacks in object_list %}
+            <br>
+            <h3>
+                <li><a href=" {% url 'snack_view' snacks.pk %}">{{ snacks.title }}</a></li>
+            </h3>
+
+            {% endfor %}
+        </ul>
+        {% endblock content %}
+    </main>
+    <footer>
+        <br>
+        <h3>Thanks for visiting us</h3>
+    </footer>
+
+</body>
+
+</html>

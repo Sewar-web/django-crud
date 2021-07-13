@@ -1,0 +1,14 @@
+{% extends 'snack_list.html' %}
+
+{% block content %}
+
+<h2>Create a new snacks </h2>
+
+<form action="" method="POST">
+    {% csrf_token%}   
+    {{form.as_p}}
+    <input type='submit' value='ADD'>
+
+</form>
+
+{% endblock content %}
