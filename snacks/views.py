@@ -25,6 +25,7 @@ class SnackCreateView(CreateView):
     template_name='snack_creat.html'
     model=snacks
     fields=['title', 'purchaser' ,'description']
+    
 
 
 class SnackUpdateView(UpdateView):
@@ -32,6 +33,7 @@ class SnackUpdateView(UpdateView):
     template_name='snack_update.html'
     model=snacks
     fields=['title', 'purchaser' ,'description']
+    
 
 class SnackDeleteView(DeleteView):
 
